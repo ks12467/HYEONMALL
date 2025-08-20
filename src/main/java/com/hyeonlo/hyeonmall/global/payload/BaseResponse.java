@@ -1,5 +1,6 @@
 package com.hyeonlo.hyeonmall.global.payload;
 
+import com.hyeonlo.hyeonmall.domain.auth.status.AuthSuccessStatus;
 import com.hyeonlo.hyeonmall.global.payload.status.ErrorStatus;
 import com.hyeonlo.hyeonmall.global.payload.status.SuccessStatus;
 import lombok.AllArgsConstructor;
@@ -24,6 +25,17 @@ public class BaseResponse<T> {
                 status.getStatus()
         );
     }
+
+    public static <T> BaseResponse<T> authSuccess(AuthSuccessStatus status, T data) {
+        return new BaseResponse<>(
+                true,
+                data,
+                status.getCode(),
+                status.getMessage(),
+                status.getStatus()
+        );
+    }
+
 
     public static <T> BaseResponse<T> fail(Basecode code) {
         return new BaseResponse<>(
