@@ -9,6 +9,10 @@
   * CI/CD를 구성하여 빌드/테스트/배포를 자동화합니다.
  
 ## 🛒 화면 설계 (와이어 프레임)
+<img width="976" height="803" alt="스크린샷 2025-08-20 10 12 51" src="https://github.com/user-attachments/assets/9e8ddbbb-4b7d-438f-8cb5-36a62ae3423d" />
+
+[Wiki Wireframe 보러가기](https://github.com/ks12467/HYEONMALL/wiki/Wireframe)
+
 
 ## 🛒 기술 스택 & 아키텍처
 * 기술 스택
@@ -22,4 +26,11 @@
 ## 🔫 트러블 슈팅
 
 
-## 🧾 API 명세서
+## 🧾 Documentation
+- Usecase
+- API 명세서
+- Architecture
+- Rule & Convention
+- Wireframe<br>
+<br>
+➡️ [Wiki 보러가기](https://github.com/ks12467/HYEONMALL/wiki)
