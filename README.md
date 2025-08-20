@@ -16,12 +16,15 @@
 
 ## 🛒 기술 스택 & 아키텍처
 * 기술 스택
-  * ㅇㅁㄴㅇ
+  * JAVA 17
+  * Spring Boot
+  * MySQL
 
 * ERD
+<img width="1136" height="625" alt="스크린샷 2025-08-20 15 59 06" src="https://github.com/user-attachments/assets/157e65be-0d0c-4a42-8f51-7773206ccda8" />
 
 * 아키택처
-  *   
+
 
 ## 🔫 트러블 슈팅
 
