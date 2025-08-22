@@ -37,10 +37,7 @@ public class JwtFilter extends OncePerRequestFilter {
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             //Bearer 부분 삭제
             jwt = jwtUtil.substringToken(authorizationHeader);
-        } else {
-            throw new AuthorizationServiceException("JWT 토큰이 필요합니다.");
         }
-
         //JWT 유효성 체크
         if (jwt != null && !jwt.isBlank()) {
             try {

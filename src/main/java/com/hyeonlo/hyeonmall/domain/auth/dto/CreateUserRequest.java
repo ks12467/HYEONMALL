@@ -1,5 +1,6 @@
 package com.hyeonlo.hyeonmall.domain.auth.dto;
 
+import com.hyeonlo.hyeonmall.domain.user.enums.UserRole;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

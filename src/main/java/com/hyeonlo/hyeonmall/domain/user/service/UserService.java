@@ -13,7 +13,7 @@ public class UserService {
     private final UserRepository userRepository;
 
     public boolean existLoginId(String loginId) {
-        return userRepository.findByLoginId(loginId);
+        return userRepository.existsByLoginId(loginId);
     }
 
     public Users createUser(String loginId, String encoded, String userName, String number) {
