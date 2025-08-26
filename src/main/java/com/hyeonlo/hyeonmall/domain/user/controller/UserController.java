@@ -29,7 +29,7 @@ public class UserController {
         return BaseResponse.userSuccess(UserSuccessStatus.UPDATE_SUCCESS, update);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/v1/user/profile")
     public BaseResponse<String> deleteUser(@AuthenticationPrincipal AuthUser authUser) {
         String delete = userService.deleteUser(authUser);
         return BaseResponse.userSuccess(UserSuccessStatus.DELETE_SUCCESS, delete);
