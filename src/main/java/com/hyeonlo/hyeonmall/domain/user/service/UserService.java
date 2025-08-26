@@ -1,8 +1,9 @@
 package com.hyeonlo.hyeonmall.domain.user.service;
 
-import com.hyeonlo.hyeonmall.domain.auth.dto.CreateUserRequest;
 import com.hyeonlo.hyeonmall.domain.user.client.UserRepository;
 import com.hyeonlo.hyeonmall.domain.user.domain.Users;
+import com.hyeonlo.hyeonmall.domain.user.status.UserErrorStatus;
+import com.hyeonlo.hyeonmall.global.error.BaseException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +20,10 @@ public class UserService {
     public Users createUser(String loginId, String encoded, String userName, String number) {
         Users user = Users.of(loginId, encoded, userName, number);
         return userRepository.save(user);
+    }
+
+
+    public Users findByLoginId(String loginId) {
+        return userRepository.findByLoginId(loginId).orElseThrow(() -> new BaseException(UserErrorStatus.NOT_FOUND_LOGINID));
     }
 }

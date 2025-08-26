@@ -7,7 +7,8 @@ import org.springframework.http.HttpStatus;
 public enum AuthSuccessStatus {
 
     OK(HttpStatus.OK.value(), "S100", "요청이 성공적으로 수행되었습니다."),
-    CREATE(HttpStatus.CREATED.value(), "S101","성공적으로 생성되었습니다." );
+    CREATE(HttpStatus.CREATED.value(), "S101","성공적으로 생성되었습니다." ),
+    LOGIN_SUCCESS(HttpStatus.ACCEPTED.value(),"S102" ,"로그인이 성공적으로 완료되었습니다." );
 
     private final int status;
     private final String code;

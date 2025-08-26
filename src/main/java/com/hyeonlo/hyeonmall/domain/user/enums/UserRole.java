@@ -1,6 +1,6 @@
 package com.hyeonlo.hyeonmall.domain.user.enums;
 
-import com.hyeonlo.hyeonmall.domain.user.exception.UserErrorStatus;
+import com.hyeonlo.hyeonmall.domain.user.status.UserErrorStatus;
 import com.hyeonlo.hyeonmall.global.error.BaseException;
 import lombok.Getter;
 
