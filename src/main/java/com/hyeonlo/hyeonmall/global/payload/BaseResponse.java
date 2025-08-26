@@ -1,10 +1,12 @@
 package com.hyeonlo.hyeonmall.global.payload;
 
 import com.hyeonlo.hyeonmall.domain.auth.status.AuthSuccessStatus;
+import com.hyeonlo.hyeonmall.domain.user.status.UserSuccessStatus;
 import com.hyeonlo.hyeonmall.global.payload.status.ErrorStatus;
 import com.hyeonlo.hyeonmall.global.payload.status.SuccessStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 
 @Getter
 @AllArgsConstructor
@@ -27,6 +29,16 @@ public class BaseResponse<T> {
     }
 
     public static <T> BaseResponse<T> authSuccess(AuthSuccessStatus status, T data) {
+        return new BaseResponse<>(
+                true,
+                data,
+                status.getCode(),
+                status.getMessage(),
+                status.getStatus()
+        );
+    }
+
+    public static <T> BaseResponse<T> userSuccess(UserSuccessStatus status, T data) {
         return new BaseResponse<>(
                 true,
                 data,

@@ -1,6 +1,6 @@
 package com.hyeonlo.hyeonmall.domain.auth.controller;
 
-import com.hyeonlo.hyeonmall.domain.auth.dto.CreateUserRequest;
+import com.hyeonlo.hyeonmall.domain.auth.dto.request.CreateUserRequest;
 import com.hyeonlo.hyeonmall.domain.auth.dto.CreateUserResponse;
 import com.hyeonlo.hyeonmall.domain.auth.dto.request.LoginRequest;
 import com.hyeonlo.hyeonmall.domain.auth.service.AuthService;

@@ -1,11 +1,10 @@
 package com.hyeonlo.hyeonmall.domain.auth.service;
 
-import com.hyeonlo.hyeonmall.domain.auth.dto.CreateUserRequest;
+import com.hyeonlo.hyeonmall.domain.auth.dto.request.CreateUserRequest;
 import com.hyeonlo.hyeonmall.domain.auth.dto.CreateUserResponse;
 import com.hyeonlo.hyeonmall.domain.auth.dto.request.LoginRequest;
 import com.hyeonlo.hyeonmall.domain.auth.status.AuthErrorStatus;
 import com.hyeonlo.hyeonmall.domain.user.domain.Users;
-import com.hyeonlo.hyeonmall.domain.user.enums.UserRole;
 import com.hyeonlo.hyeonmall.domain.user.enums.UserStatus;
 import com.hyeonlo.hyeonmall.domain.user.service.UserService;
 import com.hyeonlo.hyeonmall.global.error.BaseException;
