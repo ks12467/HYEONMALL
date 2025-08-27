@@ -1,5 +1,6 @@
 package com.hyeonlo.hyeonmall.global.payload;
 
+import com.hyeonlo.hyeonmall.domain.admin.status.AdminSuccessStatus;
 import com.hyeonlo.hyeonmall.domain.auth.status.AuthSuccessStatus;
 import com.hyeonlo.hyeonmall.domain.product.status.ProductSuccessStatus;
 import com.hyeonlo.hyeonmall.domain.user.status.UserSuccessStatus;
@@ -59,6 +60,15 @@ public class BaseResponse<T> {
         );
     }
 
+    public static <T> BaseResponse<T> adminSuccess(AdminSuccessStatus status, T data) {
+        return new BaseResponse<>(
+                true,
+                data,
+                status.getCode(),
+                status.getMessage(),
+                status.getStatus()
+        );
+    }
 
     public static <T> BaseResponse<T> fail(Basecode code) {
         return new BaseResponse<>(

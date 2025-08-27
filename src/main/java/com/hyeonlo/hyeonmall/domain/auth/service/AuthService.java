@@ -51,7 +51,7 @@ public class AuthService {
             throw new BaseException(AuthErrorStatus.WITHDRAW_ACOUNT);
         }
 
-        String token = jwtUtil.createToken(user.getUserId(),user.getLoginId(),user.getUserRole());
+        String token = jwtUtil.createToken(user.getUserId(),user.getLoginId(), user.getUserName());
         return "로그인 성공, 토큰 : " + token;
     }
 }
