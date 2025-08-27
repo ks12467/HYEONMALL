@@ -1,11 +1,15 @@
 package com.hyeonlo.hyeonmall.domain.user.domain;
 
+import com.hyeonlo.hyeonmall.domain.product.domain.Product;
 import com.hyeonlo.hyeonmall.domain.user.enums.UserRole;
 import com.hyeonlo.hyeonmall.domain.user.enums.UserStatus;
 import com.hyeonlo.hyeonmall.global.utils.Timestamped;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -29,6 +33,9 @@ public class Users extends Timestamped {
 
     @Enumerated(EnumType.STRING)
     private UserStatus userStatus = UserStatus.ACTIVE;
+
+    @OneToMany(mappedBy = "seller", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Product> products = new ArrayList<>();
 
     private Users(String loginId, String password, String userName, String number) {
         this.loginId = loginId;

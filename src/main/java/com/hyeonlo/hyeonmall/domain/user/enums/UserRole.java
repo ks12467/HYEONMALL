@@ -10,6 +10,7 @@ import java.util.Arrays;
 public enum UserRole {
 
     USER("사용자"),
+    SELLER("판매자"),
     ADMIN("관리자");
 
     private final String message;

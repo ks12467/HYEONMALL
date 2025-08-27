@@ -34,5 +34,4 @@ public class UserController {
         String delete = userService.deleteUser(authUser);
         return BaseResponse.userSuccess(UserSuccessStatus.DELETE_SUCCESS, delete);
     }
-
 }
